@@ -1,0 +1,27 @@
+MyCompany\Invoice\DomainModel\InvoiceEntity:
+  type: entity
+  table: invoice
+  id:
+    id:
+      type: guid
+      generator:
+        strategy: NONE
+  fields:
+    title:
+      type: string
+      length: 255
+      nullable: true
+    author:
+      type: string
+      length: 255
+      nullable: true
+    createdAt:
+      type: datetime
+      column: created_at
+      nullable: false
+
+  oneToMany:
+    lineItems:
+      targetEntity: InvoiceLineItemEntity
+      mappedBy: invoice
+      cascade: ['persist']

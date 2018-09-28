@@ -1,0 +1,21 @@
+MyCompany\Book\DomainModel\BookEntity:
+  type: entity
+  table: books
+  id:
+    id:
+      type: guid
+      generator:
+        strategy: NONE
+  fields:
+    title:
+      type: string
+      length: 255
+      nullable: true
+    author:
+      type: string
+      length: 255
+      nullable: true
+    createdAt:
+      type: datetime
+      column: created_at
+      nullable: false

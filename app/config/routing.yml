@@ -1,0 +1,5 @@
+api_v1:
+    #prefix: /v1
+    resource: "@AppBundle/Resources/Config/Routes/Routes.yml"
+    type: rest
+

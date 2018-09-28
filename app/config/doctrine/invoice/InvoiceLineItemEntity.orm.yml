@@ -1,0 +1,29 @@
+MyCompany\Invoice\DomainModel\InvoiceLineItemEntity:
+  type: entity
+  table: invoice
+  id:
+    id:
+      type: guid
+      generator:
+        strategy: NONE
+  fields:
+    title:
+      type: string
+      length: 255
+      nullable: true
+    author:
+      type: string
+      length: 255
+      nullable: true
+    createdAt:
+      type: datetime
+      column: created_at
+      nullable: false
+
+  manyToOne:
+      invoice:
+        targetEntity: MyCompany\Invoice\DomainModel\InvoiceEntity
+        joinColumn:
+          name: invoice_id
+          referencedColumnName: id
+          onDelete: CASCADE

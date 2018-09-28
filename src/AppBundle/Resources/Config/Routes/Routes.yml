@@ -1,0 +1,4 @@
+api_v1:
+  type: rest
+  resource: "Book/Book.yml"
+  name_prefix:  api_1_

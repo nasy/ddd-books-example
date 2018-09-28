@@ -1,0 +1,35 @@
+# Params
+parameters:
+  book.entity.class: MyCompany\Book\DomainModel\BookEntity
+  book.repository.class: MyCompany\Book\Infrastructure\EloquentBookRepository
+  invoice.entity.class: MyCompany\Invoice\DomainModel\InvoiceEntity
+
+
+services:
+
+  # Repositories
+  book.repository:
+    class: MyCompany\Book\Infrastructure\Persistance\Doctrine\BookRepository
+    arguments: ['@doctrine.orm.entity_manager', '%book.entity.class%']
+
+
+  # Services
+  email_sender.service:
+      class: MyCompany\Email\Infrastructure\SparkPost\SparkPostSendEmailService
+      arguments: []
+
+
+  # Book Actions
+  create_book.action:
+      class: MyCompany\Book\Application\CreateBookRequest
+      arguments: ['@my_company.book.repository', '@email_sender.service']
+      tags:
+          - { handles: MyCompany\Book\Application\CreateBookAction }
+
+  update_book.action:
+      class: MyCompany\Book\Application\UpdateBookAction
+      arguments: ['@my_company.book.repository']
+      tags:
+          - { handles: MyCompany\Book\Application\UpdateBookAction }
+
+
