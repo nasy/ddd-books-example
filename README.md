@@ -22,4 +22,4 @@ Elements of HA
     - Domain Events (Advanced)
     
     
-    No further documentation is provider as this project does not run, it's just to demo the layers and folder structure involved.
+    No further documentation is provided as this project does not run, it's purpose it's to demo the layers and folder structure involved.
