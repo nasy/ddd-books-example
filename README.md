@@ -1,9 +1,8 @@
-HA Domain Driven Design
+A Small Fun Demo Using Domain Driven Design Folder Structure
 ========================
 
-1) What is DDD
-2) What is Hexagonal Architecture (Ports and Adapters)
-3) Why is it good?
+This project has a simple DDD and Hexagonal Architecture (Ports and Adapters) architecture.
+Why is it good to use Hexagonal Architecture?
 
     - Clean Architecture = Easy and quick to maintain
     - Clean Code = Less bugs = Happy clients
@@ -11,10 +10,7 @@ HA Domain Driven Design
     - Standardised structure across projects = Easy work multiple projects
     - Industry best practice = Well recognition in the community
     
-    Spaghetti -> MVC -> Clean Architecture (Not always necessary)
-
-4) Layers of HA (Picture)
-5) Elements of HA
+Elements of HA
 
     - Entities
     - Repositories
@@ -24,12 +20,6 @@ HA Domain Driven Design
     
     - Aggregates (Advanced)
     - Domain Events (Advanced)
-
-6) Services Vs Use Cases
-7) Create book example (Entity private properties)
-9) Switching Email Providers Case
-10) Update book example (Value Objects)
-11) Decoupled (Easy to test) (Coverage %)
-12  Why Active Record is not good for HA
-12) Aggregates (Multiple objects involved)
-13) Domain Events (Advanced, similar to Angular Events)
+    
+    
+    No further documentation is provider as this project does not run, it's just to demo the layers and folder structure involved.
